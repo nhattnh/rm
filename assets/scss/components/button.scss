@@ -1,0 +1,36 @@
+.btn {
+  // Button base
+  @apply inline-flex items-center no-underline cursor-pointer bg-transparent border border-transparent transition duration-300 ease-out;
+  @media (prefers-reduced-motion: reduce) {
+    @apply transition-none;
+  }
+
+  // Button style
+  @apply  py-14 px-44 rounded-30;
+}
+
+
+
+.btn-primary {
+  @apply bg-primary-accent-button text-white;
+
+  &:hover {
+    @apply bg-secondary-accent  text-white;
+  }
+}
+
+.btn-secondary {
+  @apply text-primary-accent bg-white;
+
+  &:hover {
+    @apply bg-primary-accent-button text-white border-white;
+  }
+}
+
+.btn-text {
+  @apply text-primary-accent border-b border-primary-accent w-max;
+
+  &:hover {
+    @apply  text-secondary-accent border-secondary-accent w-max border-b;
+  }
+}

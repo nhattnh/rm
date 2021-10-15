@@ -1,0 +1,180 @@
+:root {
+  @apply text-16 text-primary-gray;
+}
+
+html {
+  @apply font-display text-gray-600;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  @apply text-blue-200  text-16;
+}
+
+.h1 {
+  @apply text-40 font-display;
+  line-height: 120%;
+}
+
+.h2 {
+  @apply text-30  font-display;
+  line-height: 120%;
+}
+
+.h2-medium {
+  @apply text-30 font-display font-medium;
+  line-height: 120%;
+}
+
+.h3 {
+  @apply text-24;
+  line-height: 150%;
+}
+.h3-medium {
+  @apply text-24 font-medium font-display;
+  line-height: 150%;
+}
+
+.h4 {
+  @apply text-18 font-display;
+  line-height: 120%;
+}
+
+.h4-style {
+  @apply text-16 font-then;
+  line-height: 150%;
+}
+
+.h5 {
+  @apply text-16 font-medium font-display;
+  line-height: 150%;
+}
+
+.h5-medium {
+  @apply text-16 font-medium;
+  line-height: 150%;
+}
+
+.text-button {
+  @apply text-16;
+  line-height: 1;
+}
+
+.body-text {
+  @apply text-18 font-then;
+  line-height: 120%;
+}
+
+.body-text-medium {
+  @apply text-18 font-bold;
+  line-height: 150%;
+}
+
+.body-text-semibold {
+  @apply text-18 font-semibold;
+  line-height: 150%;
+}
+
+.sub-text {
+  @apply text-14 font-then font-display;
+  line-height: 120%;
+}
+ .body-text-bold {
+    @apply text-18 font-bold;
+    line-height: 150%;
+  }
+
+@screen lg {
+  .h1 {
+    @apply text-64  font-display;
+    line-height: 120%;
+  }
+
+  .h2 {
+    @apply text-50  font-display;
+    line-height: 120%;
+  }
+
+  .h2-medium {
+    @apply text-50  font-display;
+    line-height: 120%;
+  }
+
+  .h3 {
+    @apply text-32  font-display;
+    line-height: 150%;
+  }
+  .h3-medium {
+    @apply text-32 font-medium font-display;
+    line-height: 150%;
+  }
+
+  .h4 {
+    @apply text-24  font-display;
+    line-height: 150%;
+  }
+
+  .h4-style {
+    @apply text-24 font-then;
+    line-height: 150%;
+  }
+
+  .h5 {
+    @apply text-20 font-medium font-display;
+    line-height: 150%;
+  }
+
+  .h5-medium {
+    @apply text-20 font-medium;
+    line-height: 150%;
+  }
+
+  .text-button {
+    @apply text-24  font-display;
+    line-height: 100%;
+  }
+
+  .body-text {
+    @apply text-18 font-then;
+    line-height: 150%;
+  }
+
+  .body-text-medium {
+    @apply text-18 font-bold;
+    line-height: 150%;
+  }
+
+  .body-text-semibold {
+    @apply text-18 font-semibold;
+    line-height: 150%;
+  }
+
+  .sub-text {
+    @apply text-16 font-then font-display;
+    line-height: 120%;
+  }
+
+  .text-opacity {
+    @apply text-18 font-then;
+    line-height: 150%;
+  }
+
+    .body-text-bold {
+    @apply text-18 font-bold;
+    line-height: 150%;
+  }
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.line-clamp-4 {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

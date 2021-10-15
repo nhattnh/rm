@@ -1,0 +1,115 @@
+<template>
+  <span v-if="false" />
+</template>
+
+<script>
+import site from '../config/site.json'
+// Test on: https://cards-dev.twitter.com/validator
+// Test on: https://developers.facebook.com/tools/debug/
+export default {
+  props: {
+    title: {
+      type: String,
+      required: true,
+    },
+    description: {
+      type: String,
+      required: true,
+    },
+    image: {
+      type: String,
+      default: '',
+    },
+    capitalize: {
+      type: Boolean,
+      default: true,
+    },
+  },
+
+  computed: {
+    titleCapitalize() {
+      return this.capitalize ? this.capitalizeText(this.title) : this.title
+    },
+    imageCover() {
+      return this.image
+        ? `${site.BASE_URL}${this.image}`
+        : site.BASE_URL + site.SITE_IMAGE
+    },
+  },
+
+  methods: {
+    capitalizeText(string) {
+      return string
+        .toUpperCase()
+        .replace(/(?:^|\s)\S/g, function (a) {
+          return a.toUpperCase()
+        })
+        .replace('Jamstack', 'JAMstack')
+    },
+  },
+
+  head() {
+    return {
+      title: this.titleCapitalize,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.description,
+        },
+        {
+          hid: 'twitter:title',
+          name: 'twitter:title',
+          content: this.titleCapitalize,
+        },
+        {
+          hid: 'twitter:description',
+          name: 'twitter:description',
+          content: this.description,
+        },
+        {
+          hid: 'twitter:image',
+          name: 'twitter:image',
+          content: this.imageCover,
+        },
+        {
+          hid: 'twitter:image:alt',
+          name: 'twitter:image:alt',
+          content: this.titleCapitalize,
+        },
+        {
+          hid: 'twitter:card',
+          name: 'twitter:card',
+          content: 'summary_large_image',
+        },
+        {
+          hid: 'og:title',
+          property: 'og:title',
+          content: this.titleCapitalize,
+        },
+        {
+          hid: 'og:description',
+          property: 'og:description',
+          content: this.description,
+        },
+        {
+          hid: 'og:image',
+          property: 'og:image',
+          content: this.imageCover,
+        },
+        {
+          hid: 'og:image:secure_url',
+          property: 'og:image:secure_url',
+          content: this.imageCover,
+        },
+        {
+          hid: 'og:image:alt',
+          property: 'og:image:alt',
+          content: this.titleCapitalize,
+        },
+      ],
+    }
+  },
+}
+</script>
+
